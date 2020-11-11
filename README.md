@@ -1,14 +1,20 @@
-Exercise 2 - Rock Paper Scissors
-Display 3 images, for "Rock", "Paper" and "Scissors".
+# Rock Paper Scissors App (Work In Progress)
+###### written in React
 
-Display a score board. Player and Computer start at 0.
 
-Display a button to reset the game. This should set both players to score 0.
 
-When clicking on the one of the images, your application should pick one of the 3 choices as well, at random.
+**Demo:** https://hengameh.github.io/react-rock-paper-scissors/
 
-Increment the score by 1 to the winner. Either use an alert or display a message about who won.
+## Application Requirements:
 
-Once one of the players reaches 5 points, display a message about who won.
+- [x] Display 3 images, for "Rock", "Paper" and "Scissors".
 
-We will go over this exercise on Class 3, and we will discuss good strategies in composing Components, good React practices, proper use of props, state and event handlers.
+- [x] Display a score board. Player and Computer start at 0.
+
+- [x] Display a button to reset the game. This should set both players to score 0.
+
+- [ ] When clicking on the one of the images, your application should pick one of the 3 choices as well, at random.
+
+- [ ] Increment the score by 1 to the winner. Either use an alert or display a message about who won.
+
+- [ ] Once one of the players reaches 5 points, display a message about who won.
