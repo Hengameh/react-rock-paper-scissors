@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/react-rock-paper-scissors/static/css/main.7169bbb9.chunk.css",
+    "main.js": "/react-rock-paper-scissors/static/js/main.40837ace.chunk.js",
+    "main.js.map": "/react-rock-paper-scissors/static/js/main.40837ace.chunk.js.map",
+    "runtime-main.js": "/react-rock-paper-scissors/static/js/runtime-main.b9fb07a4.js",
+    "runtime-main.js.map": "/react-rock-paper-scissors/static/js/runtime-main.b9fb07a4.js.map",
+    "static/js/2.03862954.chunk.js": "/react-rock-paper-scissors/static/js/2.03862954.chunk.js",
+    "static/js/2.03862954.chunk.js.map": "/react-rock-paper-scissors/static/js/2.03862954.chunk.js.map",
+    "index.html": "/react-rock-paper-scissors/index.html",
+    "static/css/main.7169bbb9.chunk.css.map": "/react-rock-paper-scissors/static/css/main.7169bbb9.chunk.css.map",
+    "static/js/2.03862954.chunk.js.LICENSE.txt": "/react-rock-paper-scissors/static/js/2.03862954.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b9fb07a4.js",
+    "static/js/2.03862954.chunk.js",
+    "static/css/main.7169bbb9.chunk.css",
+    "static/js/main.40837ace.chunk.js"
+  ]
+}
