@@ -1,7 +1,11 @@
 # Rock Paper Scissors App (Work In Progress)
 ###### written in React
 
+<<<<<<< HEAD
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+=======
+
+>>>>>>> 8228a4ae4abf4e0b0d0732c7170a30e70bbdddd1
 
 **Demo:** https://hengameh.github.io/react-rock-paper-scissors/
 
@@ -18,6 +22,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - [ ] Increment the score by 1 to the winner. Either use an alert or display a message about who won.
 
 - [ ] Once one of the players reaches 5 points, display a message about who won.
+<<<<<<< HEAD
 
 
 Licensed under the [MIT License](LICENSE)
@@ -37,3 +42,5 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
+=======
+>>>>>>> 8228a4ae4abf4e0b0d0732c7170a30e70bbdddd1
