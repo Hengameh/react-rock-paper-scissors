@@ -1,18 +1,31 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React, {Component} from 'react';
 
-function Time() {
-    const element = (
-      <div>
-        <p>{new Date().toLocaleTimeString()}</p>
-      </div>
-    );
-    ReactDOM.render(
-      element,
-      document.getElementById('time')
-    );
+class Time extends Component {
+  constructor(props) {
+    super(props)
+    this.state={time:new Date()}
   }
-  
-  setInterval(Time, 1000);
+
+  currentTime()
+  {
+    this.setState({
+      time: new Date()
+    })
+  }
+  componentDidMount()
+  {
+setInterval(()=>this.currentTime(),1000)
+  }
+
+  render() {
+
+    return (
+      <p>
+        {this.state.time.toLocaleTimeString()}
+      </p>
+    )
+  }
+
+}
 
   export default Time;
