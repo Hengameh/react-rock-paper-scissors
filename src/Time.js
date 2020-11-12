@@ -1,31 +1,24 @@
-import React, {Component} from 'react';
+import React, { Component } from "react";
 
 class Time extends Component {
   constructor(props) {
-    super(props)
-    this.state={time:new Date()}
+    super(props);
+    this.state = { time: new Date() };
   }
 
-  currentTime()
-  {
+  currentTime() {
     this.setState({
-      time: new Date()
-    })
+      time: new Date(),
+    });
   }
-  componentDidMount()
-  {
-setInterval(()=>this.currentTime(),1000)
+
+  componentDidMount() {
+    setInterval(() => this.currentTime(), 1000);
   }
 
   render() {
-
-    return (
-      <p>
-        {this.state.time.toLocaleTimeString()}
-      </p>
-    )
+    return <p>{this.state.time.toLocaleTimeString()}</p>;
   }
-
 }
 
-  export default Time;
+export default Time;
