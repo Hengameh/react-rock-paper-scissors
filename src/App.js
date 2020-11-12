@@ -1,7 +1,7 @@
 import React from 'react';
 import GameButton from './GameButton';
 import './App.css';
-
+import Time from './Time';
 
 class App extends React.Component {
 constructor(props){
@@ -9,14 +9,12 @@ super(props);
   this.state = {
     playerScore : 3,
     computerScore : 5
-  };
-
-  this.handleClickReset = this.handleClickReset.bind(this);
   }
 
+  this.handleClickReset = this.handleClickReset.bind(this);
+}
   handleClickReset = () => {
     console.log('CLICKED');
-    
     this.setState({
       playerScore:0,
       computerScore:0
@@ -28,7 +26,8 @@ super(props);
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Rock Paper Scissor Game</h1><p id="time"></p>
+        <h1>Rock Paper Scissor Game</h1>
+        <p id="time"></p>
       </header>
       
       <div className="score-board">
