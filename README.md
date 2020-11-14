@@ -13,11 +13,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 - [x] Display a button to reset the game. This should set both players to score 0.
 
-- [ ] When clicking on the one of the images, your application should pick one of the 3 choices as well, at random.
+- [x] When clicking on the one of the images, your application should pick one of the 3 choices as well, at random.
 
-- [ ] Increment the score by 1 to the winner. Either use an alert or display a message about who won.
+- [x] Increment the score by 1 to the winner. Either use an alert or display a message about who won.
 
-- [ ] Once one of the players reaches 5 points, display a message about who won.
+- [x] Once one of the players reaches 5 points, display a message about who won.
 
 
 Licensed under the [MIT License](LICENSE)
