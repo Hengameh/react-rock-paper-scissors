@@ -3,13 +3,21 @@ import PlayerChoice from "./components/PlayerChoice";
 import "./App.css";
 import Time from "./components/Time";
 
+const CHOICES = ["rock", "paper", "scissors"];
+
+function getRandomChoice() {
+  const randomNum = Math.random(); // random num from 0-1
+  const random0to2 = Math.floor(randomNum * 3);
+  return CHOICES[random0to2];
+}
+
 class App extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      playerScore: 3,
-      computerScore: 5,
+      playerScore: 0,
+      computerScore: 0,
     };
 
     this.handleClickChoice = this.handleClickChoice.bind(this);
@@ -25,7 +33,35 @@ class App extends React.Component {
     });
   };
 
-  handleClickChoice() {}
+  handleClickChoice(playerChoice) {
+    const computerChoice = getRandomChoice();
+    if (playerChoice === computerChoice) {
+      alert("Its a tie!");
+      return;
+    }
+
+    if (
+      (playerChoice === "rock" && computerChoice === "scissors") ||
+      (playerChoice === "paper" && computerChoice === "rock") ||
+      (playerChoice === "scissors" && computerChoice === "paper")
+    ) {
+      // Player won
+      this.setState({ playerScore: this.state.playerScore + 1 });
+      alert("Player won the round!");
+    } else {
+      // Computer won
+      this.setState({ computerScore: this.state.computerScore + 1 });
+      alert("Computer won the round!");
+    }
+  }
+
+  componentDidUpdate() {
+    if (this.state.playerScore === 5) {
+      alert("Player won the game!");
+    } else if (this.state.computerScore === 5) {
+      alert("Computer won the game!");
+    }
+  }
 
   render() {
     return (
@@ -52,9 +88,12 @@ class App extends React.Component {
           <div className="output">Result of the current Game</div>
 
           <div className="button-wrapper">
-            <PlayerChoice name="rock" onClick={this.handleClickChoice} />
-            <PlayerChoice name="paper" onClick={this.handleClickChoice} />
-            <PlayerChoice name="scissors" onClick={this.handleClickChoice} />
+            <PlayerChoice name="paper" onClickChoice={this.handleClickChoice} />
+            <PlayerChoice name="rock" onClickChoice={this.handleClickChoice} />
+            <PlayerChoice
+              name="scissors"
+              onClickChoice={this.handleClickChoice}
+            />
           </div>
 
           <p id="action-message"> Make your move</p>
