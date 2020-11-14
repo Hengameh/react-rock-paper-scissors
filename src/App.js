@@ -58,8 +58,10 @@ class App extends React.Component {
   componentDidUpdate() {
     if (this.state.playerScore === 5) {
       alert("Player won the game!");
+      this.handleClickReset();
     } else if (this.state.computerScore === 5) {
       alert("Computer won the game!");
+      this.handleClickReset();
     }
   }
 
