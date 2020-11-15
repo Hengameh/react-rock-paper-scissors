@@ -18,6 +18,7 @@ class App extends React.Component {
     this.state = {
       playerScore: 0,
       computerScore: 0,
+      resultMessage: "Pick one to start...",
     };
 
     this.handleClickChoice = this.handleClickChoice.bind(this);
@@ -30,13 +31,16 @@ class App extends React.Component {
     this.setState({
       playerScore: 0,
       computerScore: 0,
+      resultMessage: "Start a new Game",
     });
   };
 
   handleClickChoice(playerChoice) {
     const computerChoice = getRandomChoice();
     if (playerChoice === computerChoice) {
-      alert("Its a tie!");
+      this.setState({
+        resultMessage: "Its a tie!",
+      });
       return;
     }
 
@@ -46,21 +50,29 @@ class App extends React.Component {
       (playerChoice === "scissors" && computerChoice === "paper")
     ) {
       // Player won
-      this.setState({ playerScore: this.state.playerScore + 1 });
-      alert("Player won the round!");
+      this.setState({
+        playerScore: this.state.playerScore + 1,
+        resultMessage: "Player won this round!",
+      });
     } else {
       // Computer won
-      this.setState({ computerScore: this.state.computerScore + 1 });
-      alert("Computer won the round!");
+      this.setState({
+        computerScore: this.state.computerScore + 1,
+        resultMessage: "Computer won this round!",
+      });
     }
   }
 
   componentDidUpdate() {
     if (this.state.playerScore === 5) {
-      alert("Player won the game!");
+      this.setState({
+        resultMessage: "Congrats you won the game!",
+      });
       this.handleClickReset();
     } else if (this.state.computerScore === 5) {
-      alert("Computer won the game!");
+      this.setState({
+        resultMessage: "Computer won the game!",
+      });
       this.handleClickReset();
     }
   }
@@ -87,7 +99,9 @@ class App extends React.Component {
         <div id="game">
           <img className="computer" src="computer.png" alt="computer" />
 
-          <div className="output">Result of the current Game</div>
+          <div className="output">
+            {this.state.resultMessage && <p>{this.state.resultMessage}</p>}
+          </div>
 
           <div className="button-wrapper">
             <PlayerChoice name="paper" onClickChoice={this.handleClickChoice} />
